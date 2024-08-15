@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.813" tests="1" failures="1">
+  <testsuite name="Root Suite" timestamp="2024-08-05T22:49:36" tests="0" file="cypress\e2e\apiShowcase.spec.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="API test suite" timestamp="2024-08-05T22:49:36" tests="1" time="0.808" failures="1">
+    <testcase name="API test suite first test" time="0.000" classname="first test">
+      <failure message="`cy.request()` was called with an invalid method: `PUSH`. Method can be: `GET`, `POST`, `PUT`, `DELETE`, `PATCH`, `HEAD`, `OPTIONS`, or any other method supported by Node&apos;s HTTP parser.
+
+https://on.cypress.io/request" type="CypressError"><![CDATA[CypressError: `cy.request()` was called with an invalid method: `PUSH`. Method can be: `GET`, `POST`, `PUT`, `DELETE`, `PATCH`, `HEAD`, `OPTIONS`, or any other method supported by Node's HTTP parser.
+
+https://on.cypress.io/request
+    at Context.request (http://localhost:4200/__cypress/runner/cypress_runner.js:132950:70)
+    at wrapped (http://localhost:4200/__cypress/runner/cypress_runner.js:138395:43)
+From Your Spec Code:
+    at Context.eval (webpack://ngx-admin/./cypress/e2e/apiShowcase.spec.js:13:13)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

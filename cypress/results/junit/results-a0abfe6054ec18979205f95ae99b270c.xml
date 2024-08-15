@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="7.666" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2024-08-05T22:41:57" tests="0" file="cypress\e2e\slider2.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="second slider" timestamp="2024-08-05T22:41:57" tests="1" time="7.662" failures="0">
+    <testcase name="second slider simple slider invoke" time="4.557" classname="simple slider invoke">
+    </testcase>
+  </testsuite>
+</testsuites>

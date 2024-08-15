@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="12.232" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2024-08-05T22:51:15" tests="0" file="cypress\e2e\toolTip.spec.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Practice test suite" timestamp="2024-08-05T22:51:15" tests="1" time="12.228" failures="0">
+    <testcase name="Practice test suite dynamic loading" time="7.872" classname="dynamic loading">
+    </testcase>
+  </testsuite>
+</testsuites>

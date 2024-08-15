@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-08-05T22:49:55.966Z",
+    "end": "2024-08-05T22:50:01.497Z",
+    "duration": 5531,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0eae3b08-35e1-444e-a974-15f8b9b8c64f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\firstTest.spec.js",
+      "file": "cypress\\e2e\\firstTest.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0d9952d3-4825-4a97-ad7e-534acaad4bd2",
+          "title": "First test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Fifth test",
+              "fullTitle": "First test suite Fifth test",
+              "timedOut": null,
+              "duration": 5308,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:4200');\ncy.contains('Tables & Data').click();\ncy.contains('Smart Table').click();\ncy.get('tbody').contains('tr', 'Mark').then(tableRow => {\n  cy.wrap(tableRow).find('.nb-edit').click();\n  const age = [20, 30, 40, 200];\n  cy.wrap(age).each(age => {\n    cy.get('thead [placeholder=\"Age\"]').clear().type(age);\n    wait(500);\n    cy.get('tbody tr').each(tableRow => {\n      if (age == 200) {\n        cy.wrap(tableRow).should('contain', 'No data found');\n      } else {\n        cy.wrap(tableRown).find(td).eq(6).should('contain', age);\n      }\n    });\n  });\n});",
+              "err": {
+                "message": "ReferenceError: wait is not defined",
+                "estack": "ReferenceError: wait is not defined\n    at Context.eval (webpack://ngx-admin/./cypress/e2e/firstTest.spec.js:128:16)",
+                "diff": null
+              },
+              "uuid": "588a9316-4b27-4735-8f78-a985bd7f65fa",
+              "parentUUID": "0d9952d3-4825-4a97-ad7e-534acaad4bd2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "588a9316-4b27-4735-8f78-a985bd7f65fa"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 5308,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-08-05T22:51:34.723Z",
+    "end": "2024-08-05T22:51:42.099Z",
+    "duration": 7376,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c6c126cf-621a-40ac-93f2-51f70e6c7fd2",
+      "title": "",
+      "fullFile": "cypress\\e2e\\webTablespec.js",
+      "file": "cypress\\e2e\\webTablespec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "31cef7a6-5b16-444f-ab4e-70eff6e5fbc3",
+          "title": "table forms",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "tableforms",
+              "fullTitle": "table forms tableforms",
+              "timedOut": null,
+              "duration": 4653,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const userDetails = {\n  name: 'Pepa',\n  surname: 'Zdepa',\n  email: 'email@email.cz',\n  age: '22',\n  salary: '20000',\n  jobPosition: 'HR'\n};\ncy.contains('Elements').click();\ncy.contains('.btn-light', 'Web Tables').click({\n  force: true\n});\ncy.get('#addNewRecordButton').click();\ncy.get('.modal-content').should('be.visible');\ncy.get('#firstName').type(userDetails.name);\ncy.get('#lastName').type(userDetails.surname);\ncy.get('#userEmail').type(userDetails.email);\ncy.get('#age').type(userDetails.age);\ncy.get('#salary').type(userDetails.salary);\ncy.get('#department').type(userDetails.jobPosition);\ncy.get('#submit').click();\ncy.get('.rt-tbody').within(() => {\n  Object.values(userDetails).forEach(detail => {\n    cy.contains('.rt-tr-group', detail).should('be.visible');\n  });\n});\ncy.get('#searchBox').type(userDetails.name);\ncy.contains('.rt-tr-group', userDetails.name).should('be.visible');\ncy.get('span[title=\"Delete\"]').click();\ncy.get('.rt-tr-group').should('not.contain', userDetails.name);",
+              "err": {
+                "message": "Error: The following error originated from your application code, not from Cypress.\n\n  > Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the `crossorigin` attribute and setting a CORS header.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nhttps://on.cypress.io/cross-origin-script-error",
+                "estack": "Error: The following error originated from your application code, not from Cypress.\n\n  > Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the `crossorigin` attribute and setting a CORS header.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nhttps://on.cypress.io/cross-origin-script-error",
+                "diff": null
+              },
+              "uuid": "60ff52bf-65a9-491f-8fd9-7ff8f24264ed",
+              "parentUUID": "31cef7a6-5b16-444f-ab4e-70eff6e5fbc3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "60ff52bf-65a9-491f-8fd9-7ff8f24264ed"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 4653,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="5.515" tests="1" failures="1">
+  <testsuite name="Root Suite" timestamp="2024-08-05T22:50:10" tests="0" file="cypress\e2e\rangeSlider.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="range Slider" timestamp="2024-08-05T22:50:10" tests="1" time="5.512" failures="1">
+    <testcase name="range Slider &quot;before each&quot; hook for &quot;slider&quot;" time="0.000" classname="&quot;before each&quot; hook for &quot;slider&quot;">
+      <failure message="The following error originated from your application code, not from Cypress.
+
+  &gt; Cannot read properties of undefined (reading &apos;msie&apos;)
+
+When Cypress detects uncaught errors originating from your application it will automatically fail the current test.
+
+This behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.
+
+https://on.cypress.io/uncaught-exception-from-application
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `range Slider`" type="TypeError"><![CDATA[TypeError: The following error originated from your application code, not from Cypress.
+
+  > Cannot read properties of undefined (reading 'msie')
+
+When Cypress detects uncaught errors originating from your application it will automatically fail the current test.
+
+This behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.
+
+https://on.cypress.io/uncaught-exception-from-application
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `range Slider`
+    at <unknown> (https://www.globalsqa.com/wp-content/themes/Savia/js/jquery.jqzoom-core.js?ver=6.4.5:23:28)
+    at <unknown> (https://www.globalsqa.com/wp-content/themes/Savia/js/jquery.jqzoom-core.js?ver=6.4.5:740:3)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>
